@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #507299;
+    padding-top: 5px;
+    padding-left: 260px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: #EDEEF0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    padding-top: 15px;
+    gap: 20px;
+}
+
+nav {
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+li>a {
+    color: #2E5473;
+    text-decoration: none;
+}
+
+.post {
+    width: 460px;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px, solid, #d0d0d0;
+    border-radius: 10px;
+    background-color: white;
+    text-align: justify;
+}
+
+.post>img {
+    width: 100%;
+}
+
+.post>p::selection {
+    color: green;
+    background-color: #edeef0;
+}
+
+.post>h4 {
+    margin-bottom: 25px;
+}
+
+.post>h4::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #d0d0d0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.buttons::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d0d0d0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: #2E5473;
+}
+
+.right-content {
+    position: fixed;
+    top: 5%;
+    right: 20%;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    gap: 15px;
+    border: 1px, solid, #d0d0d0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.right-panel>p {
+    background-color: #EDEEF0;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    color: #80808F;
+}
+
+@media (max-width:1440px) {
+    .right-content {
+        right: 8%;
+    }
+
+    header {
+        padding-left: 15%;
+    }
+}
+
+@media (max-width:1024px) {
+    .right-content {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .post {
+        max-width: 90%;
+        margin-bottom: 40px;
+    }
+}
+
+li:active {
+    background-color: #e1e5eb;
+}
+
+@media (hover:hover) {
+    li:hover {
+        background-color: #e1e5eb;
+    }
+}
